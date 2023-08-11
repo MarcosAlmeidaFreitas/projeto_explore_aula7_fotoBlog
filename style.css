@@ -53,28 +53,36 @@ main{
   overflow-y: scroll;
 }
 
-#avatar{
-  width: 8rem;
-  height: 8rem;
-  align-items: end;
-}
+
 
 nav ul{
   list-style: none;
+  font-size: 1.8rem;
+  color: var(--color-base-gray-300);
+  font-weight: 700;
+}
+
+ul li.active{
+  color: var(--color-base-gray-900);
 }
 
 header, nav, nav ul{
   display: flex;
   gap:7rem;
   align-items: center;
+  justify-content: left;
 }
 
-header form{
-  flex: 1;
+
+#avatar{
+  width: 8rem;
+  height: 8rem;
+  position: fixed;
+  margin-right: 2rem;
+  border-radius: 10rem;
 }
 
-footer p{
+footer{
   display: flex;
   justify-content: center;
 }
-
