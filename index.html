@@ -15,14 +15,27 @@
   <div id="app">
     <header class="container">
       <nav>
-        <img src="./assets/camera.svg" alt="logo de uma camera fotografica">
+        <div class="div1">
+          <img src="./assets/camera.svg" alt="logo de uma camera fotografica">
         
-        <ul>
-          <li>Home</li>
-          <li>Galeria</li>
-          <form action="">procura</form>
-        </ul>
-        <img id="avatar" src="https://source.unsplash.com/800x600/?cats" alt="">
+          <ul>
+            <li>Home</li>
+            <li>Galeria</li>
+            <form id="" action="">
+              <div class="input-wrapper">
+                <!-- A acessibilidade de tela não consegue ler o placeholder por isso vamos deixar o 
+                  label que a acessibilidade consegue ler e escondemos com o codigo css descrito como 
+                  .input-wrapper label -->
+                <label for="search">Pesquise por Imagens e Coleções</label>
+                <input id="search" type="text" placeholder="Pesquise por Imagens e Coleções">
+              </div>
+            </form>
+          </ul>
+        </div>
+        
+        <div>
+          <img id="avatar" src="https://source.unsplash.com/800x600/?cats" alt="">
+        </div>
 
       </nav>
     </header>
