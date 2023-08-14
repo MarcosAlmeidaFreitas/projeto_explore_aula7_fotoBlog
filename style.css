@@ -131,6 +131,69 @@ O position absolute alinha ele no top 0 e right 0 */
   object-fit: cover;
 }
 
+/* Galeria | Main */
+main h1{
+  padding-top: 1.6rem;
+  font-size: 2.4rem;
+}
+
+.gallery{
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+}
+
+/* Para colocar as bordas na caixa da imagem, as de cima nunca funcionam 
+pois a figura transborda a caixa  por isso tem que usar o overflow: hidden*/
+.item{
+  background-color: var(--color-base-white);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.item img{
+  width: 100%;
+  /* Solicitando que a proporção da foto fique 16:9 e solicitando 
+  que a imagem se encaixe nessa resolução cobrindo os espaços vazios  */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+
+  /* É usado junto com o hover para dar transição com a imagem */
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.item img:hover{
+  transform: scale(1.1) rotate(2deg);
+  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+}
+
+.details{
+  padding: 2.2rem;
+  margin-left: 1.2rem;
+}
+
+.details h2{
+  font-size: 1.8rem;
+  margin-left: 2.2rem;
+}
+
+.tags{
+  margin-top: 1.2rem;
+  margin-left: 2.2rem;
+}
+
+.tags span{
+  padding: 0.6rem;
+  background-color: var(--color-base-gray-100);
+  border-radius: 0.4rem;
+
+  line-height: 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
 footer p{
   text-align: center;
   padding: 1.6rem;
