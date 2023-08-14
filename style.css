@@ -88,38 +88,35 @@ header form{
   width: 100%;
 }
 
-
-/* Código para esconder o label do input*/
-/* .input-wrapper label{
+/* Escondendo o label do header que fica junto com o inpit 
+com esse codigo o Overflow e para não ter rolagem por 
+diminuir o width e height.
+O position absolute alinha ele no top 0 e right 0 */
+.input-wrapper label{
   width: 1px;
   height: 1px;
   overflow: hidden;
   position: absolute;
-} */
+} 
 
-/* .input-wrapper{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-} */
-
- /* #teste{
-  font-size: 0.2rem;
-  padding: 0;
-}  */
 
 .input-wrapper input{
   width: 100%; 
+  /* Nesse caso como o input fica travado por causa da div
+  devemos colocar o min-width para aumentar o tamanho dele
+  ja que com o with não consegue aumentar mais por causa do
+  tamanho da div */
+  min-width: 40rem;
   padding: 1.6rem;
   background-color: var(--color-base-gray-100);
   border: none;
   border-radius: 0.6rem;
   font-size: 1.6rem;
   font-weight: 600;
+  align-items: center;
 }
 
+/* Definindo a cor para o texto do placholder do input do header*/
 .input-wrapper input::placeholder{
   opacity: 0.56;
   color: var(--color-base-gray-500);
@@ -129,7 +126,8 @@ header form{
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  /* Fazendo com que a imagem não fique feia. */
+  /* Fazendo com que a imagem não fique feia, 
+  por que com esse comando ela vai cobrir o espaço definido. */
   object-fit: cover;
 }
 
@@ -137,4 +135,8 @@ footer p{
   text-align: center;
   padding: 1.6rem;
   font-weight: 600;
+}
+
+@media(min-width: 700px){
+
 }
