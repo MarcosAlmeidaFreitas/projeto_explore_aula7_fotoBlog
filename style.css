@@ -162,6 +162,8 @@ pois a figura transborda a caixa  por isso tem que usar o overflow: hidden*/
   /* É usado junto com o hover para dar transição com a imagem */
   transition-property: transform;
   transition-duration: 1s;
+
+  display: block;
 }
 
 .item img:hover{
@@ -200,6 +202,34 @@ footer p{
   font-weight: 600;
 }
 
-@media(min-width: 700px){
+header{
+  --startY: -100%;
+  animation: move .3s;
+}
 
+footer{
+  --startY: 100%;
+  animation: move .3s;
+}
+
+.item{
+  --delay: .4s;
+  animation: apper .2s var(--delay) backwards;
+}
+
+@keyframes move {
+  from{
+    transform: translateY(var(--startY));
+  }
+}
+
+@keyframes apper {
+  0%{
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50%{
+    transform: scale(1.2);
+  }
 }
